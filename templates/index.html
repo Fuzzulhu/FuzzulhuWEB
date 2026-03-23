@@ -38,12 +38,18 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Partículas o capa de humo implícita en CSS -->
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo" class="hero-logo drop-in">
-            <h2 class="motto fade-in-up">Stoner Blues Doom</h2>
-            <p class="cta-text fade-in-up delay-1">¡Nuestro primer Split EP junto a MindFlyer Fuzz ya está disponible!</p>
-            <a href="#music" class="btn-primary fade-in-up delay-2">Escuchar Ahora</a>
+            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo" class="hero-logo drop-in delay-1">
+            <div class="release-badge fade-in-up delay-2" style="margin: 1rem auto 1rem auto;">
+                <i class="fa-solid fa-compact-disc fa-spin-pulse"></i> NUEVO SPLIT EP DISPONIBLE
+            </div>
+            <p class="cta-text fade-in-up delay-3" style="margin-bottom: 2rem;">El ritual ha comenzado. Fuzzulhu x MindFlyer Fuzz.</p>
+            <a href="#music" class="btn-hero fade-in-up delay-3">
+                <i class="fa-solid fa-play" style="z-index: 2; position: relative;"></i> 
+                <span style="z-index: 2; position: relative;">Escuchar Ahora</span>
+            </a>
         </div>
     </section>
 
@@ -145,10 +151,10 @@
             
             <div class="ep-showcase">
                 <div class="ep-covers">
-                    <div class="ep-cover-wrapper" onclick="openLightbox('{{ url_for('static', filename='img/EPportada01.png') }}')" style="cursor: pointer;">
+                    <div class="ep-cover-wrapper" onclick="openLightbox(`{{ url_for('static', filename='img/EPportada01.png') }}`)" style="cursor: pointer;">
                         <img src="{{ url_for('static', filename='img/EPportada01.png') }}" alt="Portada EP Fuzzulhu" class="ep-cover-img">
                     </div>
-                    <div class="ep-cover-wrapper" onclick="openLightbox('{{ url_for('static', filename='img/EPportada02.png') }}')" style="cursor: pointer;">
+                    <div class="ep-cover-wrapper" onclick="openLightbox(`{{ url_for('static', filename='img/EPportada02.png') }}`)" style="cursor: pointer;">
                         <img src="{{ url_for('static', filename='img/EPportada02.png') }}" alt="Portada EP MindFlyer Fuzz" class="ep-cover-img">
                     </div>
                 </div>
@@ -161,7 +167,7 @@
                         <div class="track-item"><strong>White Giant</strong> <em>(Fuzzulhu)</em></div>
                         <div class="track-item"><strong>Portal al Abismo</strong> <em>(MindFlyer Fuzz)</em></div>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=fKO6OKbMRSg" target="_blank" rel="noopener noreferrer" class="btn-primary">Ver en YouTube <i class="fa-brands fa-youtube" style="margin-left: 8px;"></i></a>
+                    <a href="https://www.youtube.com/watch?v=fKO6OKbMRSg" target="_blank" rel="noopener noreferrer" class="btn-youtube">Ver en YouTube <i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
 
@@ -220,6 +226,32 @@
             hamburger.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
                 hamburger.classList.toggle('toggle');
+            });
+
+            // Navegación suave avanzada con JS para calcular el offset del header
+            document.querySelectorAll('.navbar a[href^="#"], .hero a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if(targetId === '#') return;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Cerrar menú móvil si se hace clic en un enlace
+                        if(navLinks.classList.contains('active')){
+                            navLinks.classList.remove('active');
+                            hamburger.classList.remove('toggle');
+                        }
+                    }
+                });
             });
         });
 
