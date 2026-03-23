@@ -358,6 +358,10 @@ body::before {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.5), 0 0 15px var(--accent-glow);
 }
+.social-btn i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
 
 /* --- EP Showcase (Hipnótico) --- */
 .ep-showcase {
@@ -612,7 +616,11 @@ body::before {
     color: var(--text-muted);
     text-decoration: none;
     margin-bottom: 0.5rem;
+    display: inline-block;
     transition: color var(--transition-fast);
+}
+.footer-contact a i {
+    margin-right: 5px;
 }
 .footer-contact a:hover {
     color: var(--accent-color);
