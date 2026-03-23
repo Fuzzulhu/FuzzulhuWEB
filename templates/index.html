@@ -143,10 +143,10 @@
             
             <div class="ep-showcase">
                 <div class="ep-covers">
-                    <div class="ep-cover-wrapper">
+                    <div class="ep-cover-wrapper" onclick="openLightbox('{{ url_for('static', filename='img/EPportada01.png') }}')" style="cursor: pointer;">
                         <img src="{{ url_for('static', filename='img/EPportada01.png') }}" alt="Portada EP Fuzzulhu" class="ep-cover-img">
                     </div>
-                    <div class="ep-cover-wrapper">
+                    <div class="ep-cover-wrapper" onclick="openLightbox('{{ url_for('static', filename='img/EPportada02.png') }}')" style="cursor: pointer;">
                         <img src="{{ url_for('static', filename='img/EPportada02.png') }}" alt="Portada EP MindFlyer Fuzz" class="ep-cover-img">
                     </div>
                 </div>
@@ -199,7 +199,13 @@
         </div>
     </footer>
 
-    <!-- Script simple para Navbar -->
+    <!-- Lightbox -->
+    <div class="lightbox" id="imageLightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="Lanzamiento Maximizado" id="lightboxImg" onclick="event.stopPropagation()">
+    </div>
+
+    <!-- Script simple para Navbar y Lightbox -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const navbar = document.querySelector('.navbar');
@@ -216,6 +222,19 @@
                 hamburger.classList.toggle('toggle');
             });
         });
+
+        // Funciones para Lightbox
+        function openLightbox(src) {
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('active');
+        }
     </script>
 </body>
 </html>
