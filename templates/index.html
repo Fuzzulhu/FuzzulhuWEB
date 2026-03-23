@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuzzulhu | Stoner Blues Doom</title>
+    <!-- Seo -->
+    <meta name="description" content="Fuzzulhu es una banda de Stoner Blues Doom de Concepción, Chile. Descubre nuestra música, integrantes y próximas fechas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navegación Sticky -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo Mini">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">Biografía</a></li>
+                <li><a href="#members">La Banda</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#music">Música</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo" class="hero-logo drop-in">
+            <h2 class="motto fade-in-up">Stoner Blues Doom</h2>
+            <p class="cta-text fade-in-up delay-1">Próximamente: Lanzamiento de nuestro primer EP</p>
+            <a href="#music" class="btn-primary fade-in-up delay-2">Escuchar Ahora</a>
+        </div>
+    </section>
+
+    <!-- Biografía -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <h2 class="section-title">El Origen del Culto</h2>
+            <div class="about-grid">
+                <div class="about-text glass-card">
+                    <p>Fuzzulhu es una banda de <strong>Stoner Blues Doom</strong> que emerge en el año 2019 en Concepción, Chile.</p>
+                    <p>Nace de la necesidad de expresar ideas musicales plagadas de tintes oscuros. Abordamos la decadencia, temas de lo urbano y lo rural, leyendas, mitos y la inconfundible imaginería cósmica de autores como H.P. Lovecraft o Edgar Allan Poe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Miembros -->
+    <section id="members" class="members section-padding">
+        <div class="container">
+            <h2 class="section-title">La Orden</h2>
+            <div class="members-grid">
+                <div class="member-card glass-card">
+                    <div class="member-info">
+                        <h3>Felipe Viecho López</h3>
+                        <p class="role">Guitarra y Voz</p>
+                    </div>
+                </div>
+                <div class="member-card glass-card">
+                    <div class="member-info">
+                        <h3>Pato Andrés Soto</h3>
+                        <p class="role">Guitarra y Coros</p>
+                    </div>
+                </div>
+                <div class="member-card glass-card">
+                    <div class="member-info">
+                        <h3>Pablo Sandoval</h3>
+                        <p class="role">Bajo</p>
+                    </div>
+                </div>
+                <div class="member-card glass-card">
+                    <div class="member-info">
+                        <h3>Rodrigo Jofré</h3>
+                        <p class="role">Batería</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour -->
+    <section id="tour" class="tour section-padding">
+        <div class="container">
+            <h2 class="section-title">Rituales en Vivo</h2>
+            <div class="tour-list">
+                <div class="tour-item glass-card">
+                    <div class="date">2025</div>
+                    <div class="details">
+                        <h4>Sepulchral Rites</h4>
+                        <p>Santiago, Chile</p>
+                    </div>
+                </div>
+                <div class="tour-item glass-card">
+                    <div class="date">2024</div>
+                    <div class="details">
+                        <h4>Festival Puerto Vivo</h4>
+                        <p>Teatro Dante, Talcahuano</p>
+                    </div>
+                </div>
+                <div class="tour-item glass-card">
+                    <div class="date">2024</div>
+                    <div class="details">
+                        <h4>Culto al Pulpo III (Halloween)</h4>
+                        <p>Talcahuano, Chile</p>
+                    </div>
+                </div>
+                <div class="tour-item glass-card">
+                    <div class="date">2024</div>
+                    <div class="details">
+                        <h4>15 años Macho Cabrio</h4>
+                        <p>Chillán, Chile</p>
+                    </div>
+                </div>
+                <div class="tour-item glass-card">
+                    <div class="date">2024</div>
+                    <div class="details">
+                        <h4>Stoner Haze IV</h4>
+                        <p>Temuco, Chile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Música y Media -->
+    <section id="music" class="music section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Transmisiones</h2>
+            <p class="mb-4">Nuestro primer EP se encuentra en proceso de grabación. Síguenos en nuestras plataformas para ser el primero en escuchar.</p>
+            <div class="social-links-big">
+                <a href="#" class="social-btn spotify">Spotify</a>
+                <a href="#" class="social-btn soundcloud">Soundcloud</a>
+                <a href="#" class="social-btn youtube">YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto y Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Footer Logo">
+                <p>DOOM - STONER - BLUES</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Booking & EPK</h4>
+                <p>Email: <a href="mailto:Fuzzulhu@gmail.com">Fuzzulhu@gmail.com</a></p>
+                <p>WhatsApp: <a href="tel:+56935138566">+569 35138566</a></p>
+                <div class="social-mini">
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Fuzzulhu. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script simple para Navbar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.querySelector('.navbar');
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) navbar.classList.add('scrolled');
+                else navbar.classList.remove('scrolled');
+            });
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('toggle');
+            });
+        });
+    </script>
+</body>
+</html>
