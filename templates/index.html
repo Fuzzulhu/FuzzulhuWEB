@@ -40,7 +40,7 @@
         <div class="hero-content">
             <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo" class="hero-logo drop-in">
             <h2 class="motto fade-in-up">Stoner Blues Doom</h2>
-            <p class="cta-text fade-in-up delay-1">Próximamente: Lanzamiento de nuestro primer EP</p>
+            <p class="cta-text fade-in-up delay-1">¡Nuestro primer Split EP junto a MindFlyer Fuzz ya está disponible!</p>
             <a href="#music" class="btn-primary fade-in-up delay-2">Escuchar Ahora</a>
         </div>
     </section>
@@ -138,8 +138,32 @@
     <!-- Música y Media -->
     <section id="music" class="music section-padding">
         <div class="container text-center">
-            <h2 class="section-title">Transmisiones</h2>
-            <p class="mb-4">Nuestro primer EP se encuentra en proceso de grabación. Síguenos en nuestras plataformas para ser el primero en escuchar.</p>
+            <h2 class="section-title">Ritual Compartido: Split EP</h2>
+            <p class="mb-4">Escucha nuestro nuevo material lanzado en colaboración con <strong>MindFlyer Fuzz</strong>.</p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-bottom: 3rem;">
+                <div style="display: flex; gap: 1rem; max-width: 500px;">
+                    <img src="{{ url_for('static', filename='img/EPportada01.png') }}" alt="Portada EP Fuzzulhu" style="width: 50%; max-width: 250px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                    <img src="{{ url_for('static', filename='img/EPportada02.png') }}" alt="Portada EP MindFlyer Fuzz" style="width: 50%; max-width: 250px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                </div>
+                
+                <div style="text-align: left; max-width: 400px; background: rgba(0,0,0,0.6); padding: 1.5rem; border-radius: 8px; border: 1px solid #444; flex-grow: 1;">
+                    <h3 style="margin-top: 0; color: #b19cd9; font-family: 'Cinzel', serif;">Tracklist</h3>
+                    <ol style="margin-bottom: 1.5rem; padding-left: 1.2rem; line-height: 1.8;">
+                        <li><strong>Nightgaunts</strong> <em>(Fuzzulhu)</em></li>
+                        <li><strong>Lamento de los Kuo-Toas</strong> <em>(MindFlyer Fuzz)</em></li>
+                        <li><strong>White Giant</strong> <em>(Fuzzulhu)</em></li>
+                        <li><strong>Portal al Abismo</strong> <em>(MindFlyer Fuzz)</em></li>
+                    </ol>
+                    <a href="https://www.youtube.com/watch?v=fKO6OKbMRSg" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: inline-block; padding: 0.5rem 1rem;">Ver en YouTube</a>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+                <iframe width="100%" height="450" style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.6);" src="https://www.youtube.com/embed/fKO6OKbMRSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <p class="mb-4">Síguenos en nuestras plataformas oficiales:</p>
             <div class="social-links-big">
                 <a href="https://open.spotify.com/intl-es/artist/5mT9qbWGWRwgFRRiKhKnzG" target="_blank" rel="noopener noreferrer" class="social-btn spotify">Spotify</a>
                 <a href="#" class="social-btn soundcloud">Soundcloud</a>
