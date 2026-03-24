@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fuzzulhu | Stoner Blues Doom</title>
     <!-- Seo -->
-    <meta name="description" content="Fuzzulhu es una banda de Stoner Blues Doom de Concepción, Chile. Descubre nuestra música, integrantes y próximas fechas.">
+    <meta name="description"
+        content="Fuzzulhu es una banda de Stoner Blues Doom de Concepción, Chile. Descubre nuestra música, integrantes y próximas fechas.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+
 <body>
 
     <!-- Navegación Sticky -->
@@ -24,10 +29,11 @@
                 <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo Mini">
             </a>
             <ul class="nav-links">
-                <li><a href="#about">Biografía</a></li>
-                <li><a href="#members">La Banda</a></li>
-                <li><a href="#tour">Tour</a></li>
-                <li><a href="#music">Música</a></li>
+                <li><a href="#about" onclick="switchTab('main-content')">Biografía</a></li>
+                <li><a href="#members" onclick="switchTab('main-content')">La Banda</a></li>
+                <li><a href="#tour" onclick="switchTab('main-content')">Tour</a></li>
+                <li><a href="#music" onclick="switchTab('main-content')">Música</a></li>
+                <li><a href="#top" onclick="switchTab('store-content')">Tienda</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
             <div class="hamburger">
@@ -36,150 +42,235 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <!-- Partículas o capa de humo implícita en CSS -->
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo" class="hero-logo drop-in delay-1">
-            <div class="release-badge fade-in-up delay-2" style="margin: 1rem auto 1rem auto;">
-                <i class="fa-solid fa-compact-disc fa-spin-pulse"></i> NUEVO SPLIT EP DISPONIBLE
-            </div>
-            <p class="cta-text fade-in-up delay-3" style="margin-bottom: 2rem;">El ritual ha comenzado. Fuzzulhu x MindFlyer Fuzz.</p>
-            <a href="#music" class="btn-hero fade-in-up delay-3">
-                <i class="fa-solid fa-play" style="z-index: 2; position: relative;"></i> 
-                <span style="z-index: 2; position: relative;">Escuchar Ahora</span>
-            </a>
-        </div>
-    </section>
+    <!-- Main Content Wrapper -->
+    <div id="main-content" class="view-module active">
 
-    <!-- Biografía -->
-    <section id="about" class="about section-padding">
-        <div class="container">
-            <h2 class="section-title">El Origen del Culto</h2>
-            <div class="about-grid">
-                <div class="about-text glass-card">
-                    <p>Fuzzulhu es una banda de <strong>Stoner Blues Doom</strong> que emerge en el año 2019 en Concepción, Chile.</p>
-                    <p>Nace de la necesidad de expresar ideas musicales plagadas de tintes oscuros. Abordamos la decadencia, temas de lo urbano y lo rural, leyendas, mitos y la inconfundible imaginería cósmica de autores como H.P. Lovecraft o Edgar Allan Poe.</p>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <!-- Partículas o capa de humo implícita en CSS -->
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="{{ url_for('static', filename='img/Logo.png') }}" alt="Fuzzulhu Logo"
+                    class="hero-logo drop-in delay-1">
+                <div class="release-badge fade-in-up delay-2" style="margin: 1rem auto 1rem auto;">
+                    <i class="fa-solid fa-compact-disc fa-spin-pulse"></i> NUEVO SPLIT EP DISPONIBLE
                 </div>
+                <p class="cta-text fade-in-up delay-3" style="margin-bottom: 2rem;">El ritual ha comenzado. Fuzzulhu x
+                    MindFlyer Fuzz.</p>
+                <a href="#music" class="btn-hero fade-in-up delay-3">
+                    <i class="fa-solid fa-play" style="z-index: 2; position: relative;"></i>
+                    <span style="z-index: 2; position: relative;">Escuchar Ahora</span>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Miembros -->
-    <section id="members" class="members section-padding">
-        <div class="container">
-            <h2 class="section-title">La Orden</h2>
-            <div class="members-grid">
-                <div class="member-card glass-card">
-                    <div class="member-info">
-                        <h3>Felipe Viecho López</h3>
-                        <p class="role">Guitarra y Voz</p>
-                    </div>
-                </div>
-                <div class="member-card glass-card">
-                    <div class="member-info">
-                        <h3>Pato Andrés Soto</h3>
-                        <p class="role">Guitarra y Coros</p>
-                    </div>
-                </div>
-                <div class="member-card glass-card">
-                    <div class="member-info">
-                        <h3>Pablo Sandoval</h3>
-                        <p class="role">Bajo</p>
-                    </div>
-                </div>
-                <div class="member-card glass-card">
-                    <div class="member-info">
-                        <h3>Rodrigo Jofré</h3>
-                        <p class="role">Batería</p>
+        <!-- Biografía -->
+        <section id="about" class="about section-padding">
+            <div class="container">
+                <h2 class="section-title">El Origen del Culto</h2>
+                <div class="about-grid">
+                    <div class="about-text glass-card">
+                        <p>Fuzzulhu es una banda de <strong>Stoner Blues Doom</strong> que emerge en el año 2019 en
+                            Concepción, Chile.</p>
+                        <p>Nace de la necesidad de expresar ideas musicales plagadas de tintes oscuros. Abordamos la
+                            decadencia, temas de lo urbano y lo rural, leyendas, mitos y la inconfundible imaginería
+                            cósmica de autores como H.P. Lovecraft o Edgar Allan Poe.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Tour -->
-    <section id="tour" class="tour section-padding">
-        <div class="container">
-            <h2 class="section-title">Rituales en Vivo</h2>
-            <div class="tour-list">
-                <div class="tour-item glass-card">
-                    <div class="date">2025</div>
-                    <div class="details">
-                        <h4>Sepulchral Rites</h4>
-                        <p>Santiago, Chile</p>
+        <!-- Miembros -->
+        <section id="members" class="members section-padding">
+            <div class="container">
+                <h2 class="section-title">La Orden</h2>
+                <div class="members-grid">
+                    <div class="member-card glass-card">
+                        <div class="member-info">
+                            <h3>Felipe Viecho López</h3>
+                            <p class="role">Guitarra y Voz</p>
+                        </div>
                     </div>
-                </div>
-                <div class="tour-item glass-card">
-                    <div class="date">2024</div>
-                    <div class="details">
-                        <h4>Festival Puerto Vivo</h4>
-                        <p>Teatro Dante, Talcahuano</p>
+                    <div class="member-card glass-card">
+                        <div class="member-info">
+                            <h3>Pato Andrés Soto</h3>
+                            <p class="role">Guitarra y Coros</p>
+                        </div>
                     </div>
-                </div>
-                <div class="tour-item glass-card">
-                    <div class="date">2024</div>
-                    <div class="details">
-                        <h4>Culto al Pulpo III (Halloween)</h4>
-                        <p>Talcahuano, Chile</p>
+                    <div class="member-card glass-card">
+                        <div class="member-info">
+                            <h3>Pablo Sandoval</h3>
+                            <p class="role">Bajo</p>
+                        </div>
                     </div>
-                </div>
-                <div class="tour-item glass-card">
-                    <div class="date">2024</div>
-                    <div class="details">
-                        <h4>15 años Macho Cabrio</h4>
-                        <p>Chillán, Chile</p>
-                    </div>
-                </div>
-                <div class="tour-item glass-card">
-                    <div class="date">2024</div>
-                    <div class="details">
-                        <h4>Stoner Haze IV</h4>
-                        <p>Temuco, Chile</p>
+                    <div class="member-card glass-card">
+                        <div class="member-info">
+                            <h3>Rodrigo Jofré</h3>
+                            <p class="role">Batería</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Música y Media -->
-    <section id="music" class="music section-padding">
-        <div class="container text-center">
-            <h2 class="section-title">Ritual Compartido: Split EP</h2>
-            <p class="mb-4">Escucha nuestro nuevo material lanzado en colaboración con <strong>MindFlyer Fuzz</strong>.</p>
-            
-            <div class="ep-showcase">
-                <div class="ep-covers">
-                    <div class="ep-cover-wrapper" onclick="openLightbox(`{{ url_for('static', filename='img/EPportada01.png') }}`)" style="cursor: pointer;">
-                        <img src="{{ url_for('static', filename='img/EPportada01.png') }}" alt="Portada EP Fuzzulhu" class="ep-cover-img">
+        <!-- Tour -->
+        <section id="tour" class="tour section-padding">
+            <div class="container">
+                <h2 class="section-title">Rituales en Vivo</h2>
+                <div class="tour-list">
+                    <div class="tour-item glass-card">
+                        <div class="date">2025</div>
+                        <div class="details">
+                            <h4>Sepulchral Rites</h4>
+                            <p>Santiago, Chile</p>
+                        </div>
                     </div>
-                    <div class="ep-cover-wrapper" onclick="openLightbox(`{{ url_for('static', filename='img/EPportada02.png') }}`)" style="cursor: pointer;">
-                        <img src="{{ url_for('static', filename='img/EPportada02.png') }}" alt="Portada EP MindFlyer Fuzz" class="ep-cover-img">
+                    <div class="tour-item glass-card">
+                        <div class="date">2024</div>
+                        <div class="details">
+                            <h4>Festival Puerto Vivo</h4>
+                            <p>Teatro Dante, Talcahuano</p>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="ep-tracklist">
-                    <h3>Tracklist</h3>
-                    <div class="tracks" style="margin-bottom: 2rem;">
-                        <div class="track-item"><strong>Nightgaunts</strong> <em>(Fuzzulhu)</em></div>
-                        <div class="track-item"><strong>Lamento de los Kuo-Toas</strong> <em>(MindFlyer Fuzz)</em></div>
-                        <div class="track-item"><strong>White Giant</strong> <em>(Fuzzulhu)</em></div>
-                        <div class="track-item"><strong>Portal al Abismo</strong> <em>(MindFlyer Fuzz)</em></div>
+                    <div class="tour-item glass-card">
+                        <div class="date">2024</div>
+                        <div class="details">
+                            <h4>Culto al Pulpo III (Halloween)</h4>
+                            <p>Talcahuano, Chile</p>
+                        </div>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=fKO6OKbMRSg" target="_blank" rel="noopener noreferrer" class="btn-youtube">Ver en YouTube <i class="fa-brands fa-youtube"></i></a>
+                    <div class="tour-item glass-card">
+                        <div class="date">2024</div>
+                        <div class="details">
+                            <h4>15 años Macho Cabrio</h4>
+                            <p>Chillán, Chile</p>
+                        </div>
+                    </div>
+                    <div class="tour-item glass-card">
+                        <div class="date">2024</div>
+                        <div class="details">
+                            <h4>Stoner Haze IV</h4>
+                            <p>Temuco, Chile</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <p class="mb-4">Síguenos en nuestras plataformas oficiales:</p>
-            <div class="social-links-big">
-                <a href="https://open.spotify.com/intl-es/artist/5mT9qbWGWRwgFRRiKhKnzG" target="_blank" rel="noopener noreferrer" class="social-btn spotify"><i class="fa-brands fa-spotify"></i> Spotify</a>
-                <a href="https://www.youtube.com/channel/UCz0qwZhQvygRs1nu85QUbNw" target="_blank" rel="noopener noreferrer" class="social-btn youtube"><i class="fa-brands fa-youtube"></i> YouTube</a>
-                <a href="https://www.instagram.com/fuzzulhu/" target="_blank" rel="noopener noreferrer" class="social-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.facebook.com/profile.php?id=61574209956932" target="_blank" rel="noopener noreferrer" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+        <!-- Música y Media -->
+        <section id="music" class="music section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">Ritual Compartido: Split EP</h2>
+                <p class="mb-4">Escucha nuestro nuevo material lanzado en colaboración con <strong>MindFlyer
+                        Fuzz</strong>.</p>
+
+                <div class="ep-showcase">
+                    <div class="ep-covers">
+                        <div class="ep-cover-wrapper"
+                            onclick="openLightbox(`{{ url_for('static', filename='img/EPportada01.png') }}`)"
+                            style="cursor: pointer;">
+                            <img src="{{ url_for('static', filename='img/EPportada01.png') }}" alt="Portada EP Fuzzulhu"
+                                class="ep-cover-img">
+                        </div>
+                        <div class="ep-cover-wrapper"
+                            onclick="openLightbox(`{{ url_for('static', filename='img/EPportada02.png') }}`)"
+                            style="cursor: pointer;">
+                            <img src="{{ url_for('static', filename='img/EPportada02.png') }}"
+                                alt="Portada EP MindFlyer Fuzz" class="ep-cover-img">
+                        </div>
+                    </div>
+
+                    <div class="ep-tracklist">
+                        <h3>Tracklist</h3>
+                        <div class="tracks" style="margin-bottom: 2rem;">
+                            <div class="track-item"><strong>Nightgaunts</strong> <em>(Fuzzulhu)</em></div>
+                            <div class="track-item"><strong>Lamento de los Kuo-Toas</strong> <em>(MindFlyer Fuzz)</em>
+                            </div>
+                            <div class="track-item"><strong>White Giant</strong> <em>(Fuzzulhu)</em></div>
+                            <div class="track-item"><strong>Portal al Abismo</strong> <em>(MindFlyer Fuzz)</em></div>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=fKO6OKbMRSg" target="_blank" rel="noopener noreferrer"
+                            class="btn-youtube">Ver en YouTube <i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <p class="mb-4">Síguenos en nuestras plataformas oficiales:</p>
+                <div class="social-links-big">
+                    <a href="https://open.spotify.com/intl-es/artist/5mT9qbWGWRwgFRRiKhKnzG" target="_blank"
+                        rel="noopener noreferrer" class="social-btn spotify"><i class="fa-brands fa-spotify"></i>
+                        Spotify</a>
+                    <a href="https://www.youtube.com/channel/UCz0qwZhQvygRs1nu85QUbNw" target="_blank"
+                        rel="noopener noreferrer" class="social-btn youtube"><i class="fa-brands fa-youtube"></i>
+                        YouTube</a>
+                    <a href="https://www.instagram.com/fuzzulhu/" target="_blank" rel="noopener noreferrer"
+                        class="social-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61574209956932" target="_blank"
+                        rel="noopener noreferrer" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i>
+                        Facebook</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        </section>
+    </div> <!-- Fin Main Content -->
+
+    <!-- Store Content Wrapper -->
+    <div id="store-content" class="view-module">
+        <section class="store section-padding" id="store">
+            <div class="container">
+                <div class="store-hero">
+                    <div class="store-hero-content">
+                        <h2 class="section-title" style="margin-bottom: 0.5rem; font-size: 3rem;">Tienda Oficial</h2>
+                        <p class="store-intro">Viste con el culto. Aceptamos transferencias.</p>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card glass-card">
+                        <div class="product-image-container">
+                            <img src="{{ url_for('static', filename='img/polera.png') }}" alt="Polera Fuzzulhu">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Polera Blanca</h3>
+                            <div class="product-price">$12.000 CLP</div>
+                            <p style="color: var(--text-muted); font-size: 0.95rem;">Tallas S, M, L, XL - Full Algodón
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="product-card glass-card">
+                        <div class="product-image-container">
+                            <img src="{{ url_for('static', filename='img/jockey.png') }}" alt="Jockey Fuzzulhu">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Jockey Logo</h3>
+                            <div class="product-price">$6.000 CLP</div>
+                            <p style="color: var(--text-muted); font-size: 0.95rem;">Talla única - Ajustable, tipo
+                                camionero.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-info glass-card">
+                    <h3>Datos de Transferencia</h3>
+                    <div class="payment-details">
+                        <p><span>Banco:</span> <strong>Tenpo Prepago</strong></p>
+                        <p><span>Tipo de cuenta:</span> <strong>Cuenta Vista</strong></p>
+                        <p><span>Nº de cuenta:</span> <strong>1 111 17 54082 1</strong></p>
+                        <p><span>RUT:</span> <strong>17.540.821-5</strong></p>
+                        <p><span>Email:</span> <strong><a
+                                    href="mailto:fuzzulhu@gmail.com">fuzzulhu@gmail.com</a></strong></p>
+                    </div>
+                    <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                        Por favor, envía el comprobante de pago por correo o
+                        <a href="https://www.instagram.com/fuzzulhu/"
+                            style="color: var(--accent-color); text-decoration: none;">Instagram DM</a>
+                        incluyendo tu talla y dirección para coordinar la entrega o envío por pagar.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div> <!-- Fin Store Content -->
 
     <!-- Contacto y Footer -->
     <footer id="contact" class="footer">
@@ -193,10 +284,14 @@
                 <p>Email: <a href="mailto:Fuzzulhu@gmail.com">Fuzzulhu@gmail.com</a></p>
                 <p>WhatsApp: <a href="tel:+56935138566">+569 35138566</a></p>
                 <div class="social-mini">
-                    <a href="https://www.instagram.com/fuzzulhu/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                    <a href="https://www.facebook.com/profile.php?id=61574209956932" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                    <a href="https://www.youtube.com/channel/UCz0qwZhQvygRs1nu85QUbNw" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a>
-                    <a href="https://open.spotify.com/intl-es/artist/5mT9qbWGWRwgFRRiKhKnzG" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-spotify"></i> Spotify</a>
+                    <a href="https://www.instagram.com/fuzzulhu/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61574209956932" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    <a href="https://www.youtube.com/channel/UCz0qwZhQvygRs1nu85QUbNw" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-youtube"></i> YouTube</a>
+                    <a href="https://open.spotify.com/intl-es/artist/5mT9qbWGWRwgFRRiKhKnzG" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-spotify"></i> Spotify</a>
                 </div>
             </div>
         </div>
@@ -228,25 +323,26 @@
                 hamburger.classList.toggle('toggle');
             });
 
-            // Navegación suave avanzada con JS para calcular el offset del header
+            // Navegación suave avanzada con JS
             document.querySelectorAll('.navbar a[href^="#"], .hero a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
                     const targetId = this.getAttribute('href');
-                    if(targetId === '#') return;
+                    if (targetId === '#' || targetId === '#top') return; // "#top" ya tiene scroll a 0 en switchTab
+
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
+                        e.preventDefault();
                         const headerOffset = 80;
                         const elementPosition = targetElement.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                        
+
                         window.scrollTo({
                             top: offsetPosition,
                             behavior: 'smooth'
                         });
 
                         // Cerrar menú móvil si se hace clic en un enlace
-                        if(navLinks.classList.contains('active')){
+                        if (navLinks.classList.contains('active')) {
                             navLinks.classList.remove('active');
                             hamburger.classList.remove('toggle');
                         }
@@ -254,6 +350,20 @@
                 });
             });
         });
+
+        // Tab Switching
+        function switchTab(tabId) {
+            document.querySelectorAll('.view-module').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger');
+            if (navLinks && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('toggle');
+            }
+        }
 
         // Funciones para Lightbox
         function openLightbox(src) {
@@ -269,4 +379,5 @@
         }
     </script>
 </body>
+
 </html>
