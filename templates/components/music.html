@@ -1,0 +1,53 @@
+<!-- Música y Media -->
+        <section id="music" class="music section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">Ritual Compartido: Split EP</h2>
+                <p class="mb-4">Escucha nuestro nuevo material lanzado en colaboración con <strong>MindFlyer
+                        Fuzz</strong>.</p>
+
+                <div class="ep-showcase">
+                    <div class="ep-covers">
+                        <div class="ep-cover-wrapper"
+                            onclick="openLightbox(`{{ url_for('static', filename='img/EPportada01.png') }}`)"
+                            style="cursor: pointer;">
+                            <img src="{{ url_for('static', filename='img/EPportada01.png') }}" alt="Portada EP Fuzzulhu"
+                                class="ep-cover-img">
+                        </div>
+                        <div class="ep-cover-wrapper"
+                            onclick="openLightbox(`{{ url_for('static', filename='img/EPportada02.png') }}`)"
+                            style="cursor: pointer;">
+                            <img src="{{ url_for('static', filename='img/EPportada02.png') }}"
+                                alt="Portada EP MindFlyer Fuzz" class="ep-cover-img">
+                        </div>
+                    </div>
+
+                    <div class="ep-tracklist">
+                        <h3>Tracklist</h3>
+                        <div class="tracks" style="margin-bottom: 2rem;">
+                            <div class="track-item"><strong>Nightgaunts</strong> <em>(Fuzzulhu)</em></div>
+                            <div class="track-item"><strong>Lamento de los Kuo-Toas</strong> <em>(MindFlyer Fuzz)</em>
+                            </div>
+                            <div class="track-item"><strong>White Giant</strong> <em>(Fuzzulhu)</em></div>
+                            <div class="track-item"><strong>Portal al Abismo</strong> <em>(MindFlyer Fuzz)</em></div>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=fKO6OKbMRSg" target="_blank" rel="noopener noreferrer"
+                            class="btn-youtube">Ver en YouTube <i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <p class="mb-4">Síguenos en nuestras plataformas oficiales:</p>
+                <div class="social-links-big">
+                    <a href="https://open.spotify.com/intl-es/artist/5mT9qbWGWRwgFRRiKhKnzG" target="_blank"
+                        rel="noopener noreferrer" class="social-btn spotify"><i class="fa-brands fa-spotify"></i>
+                        Spotify</a>
+                    <a href="https://www.youtube.com/channel/UCz0qwZhQvygRs1nu85QUbNw" target="_blank"
+                        rel="noopener noreferrer" class="social-btn youtube"><i class="fa-brands fa-youtube"></i>
+                        YouTube</a>
+                    <a href="https://www.instagram.com/fuzzulhu/" target="_blank" rel="noopener noreferrer"
+                        class="social-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61574209956932" target="_blank"
+                        rel="noopener noreferrer" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i>
+                        Facebook</a>
+                </div>
+            </div>
+        </section>

@@ -1,0 +1,22 @@
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%; top: 70px;
+        flex-direction: column;
+        background: rgba(5,5,5,0.98);
+        width: 100%; height: calc(100vh - 70px);
+        text-align: center;
+        padding-top: 3rem;
+        transition: 0.3s;
+        backdrop-filter: blur(10px);
+    }
+    .nav-links.active {
+        right: 0;
+    }
+    .hamburger { display: block; }
+    .hero-logo { width: 200px; }
+    .section-title { font-size: 2rem; }
+    .tour-item { flex-direction: column; text-align: center; gap: 1rem; }
+    .footer-grid { flex-direction: column; align-items: center; text-align: center; }
+}

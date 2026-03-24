@@ -1,0 +1,55 @@
+/* --- Footer --- */
+.footer {
+    background: #000;
+    border-top: 1px solid rgba(124, 58, 237, 0.2);
+    padding: 3rem 0 1rem;
+}
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-brand img {
+    height: 60px;
+    margin-bottom: 1rem;
+    filter: grayscale(100%) opacity(0.7);
+    transition: all var(--transition-fast);
+}
+.footer-brand:hover img {
+    filter: grayscale(0%) opacity(1);
+    filter: drop-shadow(0 0 10px var(--accent-glow));
+}
+.footer-brand p {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+.footer-contact h4 {
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+.footer-contact p, .footer-contact a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    transition: color var(--transition-fast);
+}
+.footer-contact a i {
+    margin-right: 5px;
+}
+.footer-contact a:hover {
+    color: var(--accent-color);
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
