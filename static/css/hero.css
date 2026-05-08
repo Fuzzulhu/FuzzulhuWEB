@@ -30,6 +30,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 .release-badge {
@@ -53,10 +57,14 @@
     font-size: 1.1rem;
 }
 .hero-logo {
-    width: 280px;
-    max-width: 80%;
-    margin-bottom: 0;
+    display: block;
+    width: min(320px, 80vw);
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+    margin: 0 auto 1.25rem auto;
     filter: drop-shadow(0 0 30px rgba(124, 58, 237, 0.5));
+    transform-origin: center center;
     animation: breatheLogo 6s ease-in-out infinite alternate;
 }
 .cta-text {

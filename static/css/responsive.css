@@ -15,7 +15,10 @@
         right: 0;
     }
     .hamburger { display: block; }
-    .hero-logo { width: 200px; }
+    .hero-logo {
+        width: min(220px, 72vw);
+        margin: 0 auto 1rem auto;
+    }
     .section-title { font-size: 2rem; }
     .tour-item { flex-direction: column; text-align: center; gap: 1rem; }
     .footer-grid { flex-direction: column; align-items: center; text-align: center; }
