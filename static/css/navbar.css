@@ -30,14 +30,14 @@
     align-items: center;
 }
 .nav-logo img {
-    height: 130px; 
-    margin: -25px 0;
+    height: 94px;
+    margin: 0;
     transition: transform var(--transition-fast), height var(--transition-fast), filter var(--transition-fast);
     filter: drop-shadow(0 0 8px rgba(124, 58, 237, 0.4));
 }
 .navbar.scrolled .nav-logo img {
-    height: 90px;
-    margin: -15px 0;
+    height: 78px;
+    margin: 0;
 }
 .nav-logo:hover img {
     transform: scale(1.05);

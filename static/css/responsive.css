@@ -16,8 +16,8 @@
     }
     .hamburger { display: block; }
     .hero-logo {
-        width: min(220px, 72vw);
-        margin: 0 auto 1rem auto;
+        width: min(180px, 60vw);
+        margin: 0 auto 0.8rem auto;
     }
     .section-title { font-size: 2rem; }
     .tour-item { flex-direction: column; text-align: center; gap: 1rem; }

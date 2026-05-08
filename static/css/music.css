@@ -216,6 +216,84 @@
     box-shadow: 0 15px 50px rgba(0,0,0,0.9), 0 0 40px rgba(124, 58, 237, 0.8);
 }
 
+.creators-block {
+    margin: 0 auto 3.5rem;
+    max-width: 760px;
+}
+.creators-title {
+    margin: 0 0 1.5rem;
+    font-family: var(--font-heading);
+    color: #e9d5ff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.creators-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+.creator-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.25rem 1rem 1rem;
+    text-decoration: none;
+    color: var(--text-main);
+    background: rgba(10, 10, 15, 0.78);
+    border: 1px solid rgba(124, 58, 237, 0.25);
+    border-radius: 14px;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+.creator-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 58, 237, 0.6);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55), 0 0 18px rgba(124, 58, 237, 0.35);
+}
+.creator-card span {
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+    text-align: center;
+}
+.creator-avatar {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background: #060609;
+    border: 2px solid rgba(124, 58, 237, 0.35);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06), 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+.creator-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.stoneape-avatar img {
+    transform: scale(1.26);
+}
+.mindflyer-avatar img {
+    transform: scale(1.38);
+    object-position: center 26%;
+}
+
+@media (max-width: 900px) {
+    .creators-grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+@media (max-width: 640px) {
+    .creators-grid {
+        grid-template-columns: 1fr;
+    }
+    .creator-avatar {
+        width: 140px;
+        height: 140px;
+    }
+}
+
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
